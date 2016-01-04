@@ -55,3 +55,7 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# IAR project
+Debug/
+*.c~
