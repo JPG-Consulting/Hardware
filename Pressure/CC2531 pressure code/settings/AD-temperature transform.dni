@@ -35,7 +35,7 @@ Category=_ 0
 LoggingEnabled=_ 0
 LogFile=_ ""
 [Breakpoints]
-Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.129.9@1" 0 0 0 0 "" 0 ""
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\main.c}.130.9@1" 0 0 0 0 "" 0 ""
 Count=1
 [ChipconEmu]
 Stop timers on halt=0
