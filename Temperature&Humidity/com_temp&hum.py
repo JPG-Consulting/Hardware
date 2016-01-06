@@ -24,6 +24,9 @@ while True:
         print 'open serial failed.'
         exit(1)
     str = ser.readline()
+    str = ser.readline()
+    if str.split()[0] != 'temperature':
+        str = ser.readline()
     data['temperature'] = float(str.split()[1])
     str = ser.readline()
     data['humidity'] = float(str.split()[1])
