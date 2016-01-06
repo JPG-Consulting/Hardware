@@ -2,8 +2,27 @@ import serial
 import sys
 import random
 import time
+import json
+import urllib
+import urllib2
+
+apiurldooruser  = "http://192.168.199.187/sensordata/rfiddooruser"
+apiurldoorbook  = "http://192.168.199.187/sensordata/rfiddoorbook"
+apiurlshelfuser   = "http://192.168.199.187/sensordata/rfidshelfuser"
+apiurlshelfbook  = "http://192.168.199.187/sensordata/rfidshelfbook"
+data = {}
+
+status = 0
+
+def post(url, data):
+    #data = urllib.urlencode(data)
+    req = urllib2.Request(url, data)
+    response = urllib2.urlopen(req)
+    res = response.read()
+    return res
 
 while True:
+    data = {}
     try:
         ser = serial.Serial('COM4', 9600)
     except Exception, e:
@@ -17,8 +36,12 @@ while True:
     ID = ""
     for x in str[0]:
         ID += ("%02x" % ord(x)).upper() + " "
-    print ID
+    ID = ID.strip()
+    ID = ID.replace(" ", "")
+    data['ID'] = ID
+    data = json.dumps(data)
+    print data
+    print post(apiurlshelfbook, data)
     ser.close()
-    #time.sleep(3)
 
 #output: 1 string (RFID ID)
