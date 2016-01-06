@@ -6,47 +6,56 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
-      <file>$TOOLKIT_DIR$\config\lnk_base.xcl</file>
-      <file>$TOOLKIT_DIR$\config\lnk51ew.xcl</file>
-      <file>$PROJ_DIR$\main.c</file>
-      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\Debug\Exe\Relay.d51</file>
-      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-1e16x01.r51</file>
       <file>$PROJ_DIR$\Debug\Obj\Relay.pbd</file>
-      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F64.xcl</file>
+      <file>$TOOLKIT_DIR$\inc\ioCC2530.h</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\Relay.d51</file>
       <file>$PROJ_DIR$\Debug\Exe\Relay.hex</file>
+      <file>$TOOLKIT_DIR$\config\lnk_base.xcl</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.r51</file>
+      <file>$TOOLKIT_DIR$\config\lnk51ew.xcl</file>
+      <file>$TOOLKIT_DIR$\lib\clib\cl-pli-nsid-1e16x01.r51</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\config\devices\Texas Instruments\lnk51ew_cc2530F64.xcl</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>XLINK</name>
-          <file> 10</file>
+          <file> 4</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Obj\Relay.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 9</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\main.c</name>
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 5</file>
+          <file> 9</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 0</file>
+          <file> 6</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 4</file>
+          <file> 1</file>
         </tool>
         <tool>
           <name>ICC8051</name>
-          <file> 4</file>
+          <file> 1</file>
         </tool>
       </inputs>
     </file>
@@ -55,16 +64,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 2 1 0 7</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\Debug\Obj\Relay.pbd</name>
-      <inputs>
-        <tool>
-          <name>BILINK</name>
-          <file> 5</file>
+          <file> 7 5 6 8</file>
         </tool>
       </inputs>
     </file>
@@ -73,7 +73,7 @@
       <inputs>
         <tool>
           <name>XLINK</name>
-          <file> 9 0 7</file>
+          <file> 10 6 8</file>
         </tool>
       </inputs>
     </file>

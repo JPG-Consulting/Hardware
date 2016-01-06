@@ -161,14 +161,14 @@ void main(void)
                   RLED = ON;        //¡¡µ∆
                   YLED = OFF;
                   write_relay_1();
-                  UartTX_Send_String(false_result,3);
+                  //UartTX_Send_String(false_result,3);
                 }
                 else
                 {
                   YLED = ON;        //¡¡µ∆
                   RLED = OFF; 
                   write_relay_0();
-                  UartTX_Send_String(true_result,3);
+                  //UartTX_Send_String(true_result,3);
                 }
                 
             }
