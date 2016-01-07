@@ -27,7 +27,7 @@ while True:
         exit(1)
     command = get(apiurlshelf)
     #ser.write("%d" % random.randint(0,1))
-    if command is not None:
+    if command is not None or command is not "":
         command = command.split(':')
         ser.write(command[1][0])
         sys.stdout.flush()
