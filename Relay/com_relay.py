@@ -27,9 +27,10 @@ while True:
         exit(1)
     command = get(apiurldoor)
     #ser.write("%d" % random.randint(0,1))
-    command = command.split(':')
-    ser.write(command[2][0])
-    sys.stdout.flush()
+    if command is not None:
+        command = command.split(':')
+        ser.write(command[1][0])
+        sys.stdout.flush()
     ser.close()
 
 #input: random number of {0, 1}
