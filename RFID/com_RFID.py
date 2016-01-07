@@ -38,10 +38,10 @@ while True:
         ID += ("%02x" % ord(x)).upper() + " "
     ID = ID.strip()
     ID = ID.replace(" ", "")
-    data['ID'] = ID
+    data['id'] = ID
     data = json.dumps(data)
     print data
-    print post(apiurlshelfbook, data)
+    print post(apiurldooruser, data)
     ser.close()
 
 #output: 1 string (RFID ID)

@@ -24,7 +24,7 @@ while True:
         exit(1)
     str = ser.readline()
     str = ser.readline()
-    data['gas_sample'] = float(str.split()[1])
+    data['mq2'] = float(str.split()[1])
     data = json.dumps(data)
     print data
     print post(apiurl, data)

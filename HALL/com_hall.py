@@ -22,7 +22,7 @@ while True:
     str = ""
     data = {}
     try:
-        ser = serial.Serial('COM4', 9600)
+        ser = serial.Serial('COM3', 9600)
     except Exception, e:
         print 'open serial failed.'
         exit(1)
